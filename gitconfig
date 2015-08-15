@@ -1,0 +1,12 @@
+[user]
+  name = Davide Milesi
+  email = mail@davidemilesi.com
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[color]
+  ui = true
+[branch]
+  autosetuprebase = always
+[pull]
+  rebase = true
