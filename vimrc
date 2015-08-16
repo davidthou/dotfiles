@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
@@ -59,7 +60,14 @@ set list listchars=trail:.
 set runtimepath^=~/.vim/bundle/ctrlp.vim·
 
 " airline
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
 let g:airline_theme             = 'solarized'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_symbols.branch = '⎇'
 set laststatus=2
 
 " syntastic
