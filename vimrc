@@ -33,6 +33,17 @@ let g:solarized_contrast="medium"
 let g:solarized_visibility="high"
 colorscheme solarized
 
+" Persistent undo and backups
+if has('persistent_undo')
+  set undodir=~/.vim/tmp/undo
+  set undoreload=10000
+  set undofile
+endif
+
+set backupdir=~/.vim/tmp/backup
+set directory=~/.vim/tmp/swap
+set backup
+
 " Enable correct indentation
 set sw=2 " no of spaces for indenting
 set ts=2 " show \t as 2 spaces and treat 2 spaces as \t when deleting, etc..
