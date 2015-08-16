@@ -51,7 +51,11 @@ if has("autocmd")
 endif
 
 " Turn on line numbers
-:set number
+set number
+
+" Search settings
+set hlsearch
+set incsearch
 
 " Show trailing spaces
 set list listchars=trail:.
