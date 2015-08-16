@@ -22,8 +22,6 @@ Plugin 'pangloss/vim-javascript'
 call vundle#end()             " required
 filetype plugin indent on     " required!
 
-execute pathogen#infect('bundle/{}')
-
 syntax on
 
 set t_Co=256
