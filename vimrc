@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
+Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'slim-template/vim-slim'
@@ -33,13 +34,13 @@ let g:solarized_contrast="medium"
 let g:solarized_visibility="high"
 colorscheme solarized
 
-"Enable correct indentation
+" Enable correct indentation
 set sw=2 " no of spaces for indenting
 set ts=2 " show \t as 2 spaces and treat 2 spaces as \t when deleting, etc..
 set expandtab
 set softtabstop=2
 
-"Enable indention
+" Enable indention
 if has("autocmd")
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -48,7 +49,7 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-"Turn on line numbers
+" Turn on line numbers
 :set number
 
 " Show trailing spaces
@@ -60,3 +61,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim·
 " airline
 let g:airline_theme             = 'solarized'
 set laststatus=2
+
+" syntastic
+let g:syntastic_check_on_open = 0
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
