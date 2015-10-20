@@ -24,3 +24,6 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias ls="ls -F"
+
+# Jump directory jumper
+eval "$(jump shell zsh)"
