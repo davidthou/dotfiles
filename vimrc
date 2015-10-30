@@ -18,6 +18,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'slim-template/vim-slim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()             " required
 filetype plugin indent on     " required!
@@ -77,6 +78,9 @@ set list listchars=trail:.
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim·
+
+" Nerdtree
+map <C-e> :NERDTreeToggle<CR>
 
 " airline
 if !exists('g:airline_symbols')
