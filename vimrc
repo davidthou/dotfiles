@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
@@ -96,3 +97,7 @@ set laststatus=2
 " syntastic
 let g:syntastic_check_on_open = 0
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
+" gitgutter
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn ctermbg=8
