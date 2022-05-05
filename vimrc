@@ -69,12 +69,6 @@ set number
 set hlsearch
 set incsearch
 
-" Disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 " Show trailing spaces
 set list listchars=trail:.
 
