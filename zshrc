@@ -25,8 +25,8 @@ alias gdc="git diff --cached"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias ls="ls -F"
 
-# Jump directory jumper
-eval "$(jump shell zsh)"
+# Autojump directory jumper
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 load-tfswitch() {
   local tfswitchrc_path=".terraform-version"
