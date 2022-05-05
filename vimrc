@@ -21,6 +21,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'slim-template/vim-slim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
+Plugin 'wfxr/minimap.vim'
 
 call vundle#end()             " required
 filetype plugin indent on     " required!
@@ -96,3 +97,6 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
 highlight SignColumn ctermbg=8
+
+" minimap
+let g:minimap_auto_start = 1
