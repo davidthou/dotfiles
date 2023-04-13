@@ -15,13 +15,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'slim-template/vim-slim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
-Plugin 'wfxr/minimap.vim'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()             " required
 filetype plugin indent on     " required!
@@ -90,9 +90,14 @@ let g:airline_right_sep=''
 let g:airline_symbols.branch = '⎇'
 set laststatus=2
 
-" syntastic
-let g:syntastic_check_on_open = 0
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" ale
+let g:ale_virtualtext_cursor = 'current'
+let g:ale_linters = {
+      \  'javascript': ['eslint'],
+      \  'ruby': ['ruby', 'rubocop'],
+      \  'elixir': ['credo'],
+      \}
+let g:ale_ruby_rubocop_executable = './bin/rubocop'
 
 " gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
