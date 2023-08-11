@@ -38,6 +38,9 @@ let g:solarized_contrast="medium"
 let g:solarized_visibility="high"
 colorscheme solarized
 
+" Show max line length
+set colorcolumn=110
+
 " Persistent undo and backups
 if has('persistent_undo')
   set undodir=~/.vim/tmp/undo
