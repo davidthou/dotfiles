@@ -77,8 +77,8 @@ set list listchars=trail:.
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim·
 
-" Nerdtree
-map <C-e> :NERDTreeToggle<CR>
+" Nerdtree Open at the current file or close it if pressed again
+nnoremap <silent> <expr> <C-e> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
 
 " airline
 if !exists('g:airline_symbols')
