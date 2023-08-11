@@ -22,6 +22,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'dense-analysis/ale'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()             " required
 filetype plugin indent on     " required!
@@ -105,3 +106,10 @@ highlight SignColumn ctermbg=8
 
 " minimap
 let g:minimap_auto_start = 1
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bin/rspec -f d {spec}"
